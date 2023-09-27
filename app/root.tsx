@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { Navbar } from "./components/navigation/navigation";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
@@ -22,7 +23,8 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="bg-background text-foreground">
+        <Navbar />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
